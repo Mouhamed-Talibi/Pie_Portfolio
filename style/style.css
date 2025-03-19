@@ -169,6 +169,7 @@ body {
 .hero-section {
     background: url("../imgs/woman-2.jpg") no-repeat center;
     background-size: cover;
+    height: 100vh;
     width: 100%;
 }
 
@@ -180,6 +181,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 0;
 }
 
 .hero-section .container {
@@ -239,22 +241,113 @@ body {
     background-color: var(--section-color);
 }
 
+.service {
+    position: relative;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+
 .service i {
     background-color: var(--red-color);
-    padding: 14px;
+    padding: 15px;
     color: var(--section-color);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+.service::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--red-color);
+    transition: all 0.5s ease;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.service:hover::before {
+    left: 0;
 }
 
 .service:hover {
-    background-color: var(--red-color);
     color: var(--section-color);
-    transition: .5s;
-    padding: .5rem 1rem;
-    border-radius: 10px;
+    transform: translateY(-5px);
 }
 
 .service:hover i {
     background-color: var(--section-color);
     color: var(--red-color);
+    transform: scale(1.003);
 }
 /* end services */
+
+/* start skills */
+.skills .main-heading h2::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background-color: var(--yellow-color);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 2px;
+}
+
+@media screen and (max-width: 768px) {
+    .skills .main-heading h2 {
+        font-size: 2rem;
+    }
+
+    .skills .main-heading p {
+        font-size: 1rem;
+    }
+}
+
+.skill {
+    background-color: var(--section-color);
+    color: var(--dark-color);   
+}
+
+.skill:hover,
+.skill.styled {
+    background-color: var(--dark-color);
+    color: var(--section-color);
+    border-radius: 5px;
+    height: 230px;
+    transition: 0.6s ease;
+}
+
+.skill:hover i {
+    color: var(--yellow-color);
+}
+
+.skill.styled h3 i {
+    color: var(--yellow-color);
+}
+
+.skill i {
+    color: var(--red-color);
+}
+
+.progress {
+    height: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #007bff;
+    border-radius: 5px;
+    transition: width 1.5s ease-in-out;
+}
+/* end skills */

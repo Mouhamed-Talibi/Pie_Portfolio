@@ -172,9 +172,10 @@ body {
     background-size: cover;
     height: 100vh;
     width: 100%;
+    position: relative;
 }
 
-.hero-section::before  {
+.hero-section::before {
     background-color: rgba(0, 0, 0, 0.8);
     content: "";
     position: absolute;
@@ -185,41 +186,47 @@ body {
     z-index: 0;
 }
 
-.hero-section .hero-text {
+.hero-text {
     z-index: 1;
     position: relative;
+    color: var(--section-color);
+    text-align: center;
 }
 
 .hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
     color: var(--section-color);
 }
 
-.hero-section .hero-text h1 span {
+.hero-text h1 span {
     color: var(--yellow-color);
 }
 
-.hero-section p {
+.hero-text p {
     color: var(--yellow-color);
     border-bottom: 1px solid var(--blue-color);
     padding: 0 1rem;
-    font-size: 40px;
+    font-size: 2rem;
 }
 
 @media screen and (max-width: 767px) {
-    .hero-section p {
-        font-size: 30px;
+    .hero-text h1 {
+        font-size: 2rem;
     }
-}
 
-@media screen and (min-width: 768px) {
-    .hero-section .hero-text p {
-        width: 300px  
+    .hero-text p {
+        font-size: 1.5rem;
     }
 }
 
 @media screen and (max-width: 678px) {
-    .hero-section .hero-text p {
-        width: 210px  
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
     }
 }
 /* end hero */

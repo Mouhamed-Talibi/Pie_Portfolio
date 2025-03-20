@@ -59,6 +59,7 @@ body {
     background-color: var(--yellow-color);
     color: var(--dark-color);
     padding: .5rem 1rem;
+    transition: .5s;
 }
 
 .main-btn:hover, .main-btn:focus {
@@ -184,10 +185,13 @@ body {
     z-index: 0;
 }
 
-.hero-section .container {
-    height: 100%;
+.hero-section .hero-text {
     z-index: 1;
     position: relative;
+}
+
+.hero-text h1 {
+    color: var(--section-color);
 }
 
 .hero-section .hero-text h1 span {
@@ -196,9 +200,15 @@ body {
 
 .hero-section p {
     color: var(--yellow-color);
-    border-bottom: 1px solid var(--section-color);
+    border-bottom: 1px solid var(--blue-color);
     padding: 0 1rem;
-    border-radius: 3px;
+    font-size: 40px;
+}
+
+@media screen and (max-width: 767px) {
+    .hero-section p {
+        font-size: 30px;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -425,6 +435,10 @@ body {
 /* start footer */
 .footer {
     background-color: var(--dark-color);
+}
+
+.footer .row h3 {
+    color: var(--yellow-color);
 }
 
 .footer .copyright > span {

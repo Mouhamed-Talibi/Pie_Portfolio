@@ -128,5 +128,51 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Custom Script -->
+    <script>
+        // Function to animate progress bars
+        function animateProgressBars() {
+            const progressBars = document.querySelectorAll('.progress-bar');
+            
+            progressBars.forEach(bar => {
+                const targetWidth = bar.getAttribute('data-progress') + '%';
+                bar.style.width = targetWidth; // Animate to the target width
+            });
+        }
+
+        // Function to check if element is in viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.bottom >= 0
+            );
+        }
+
+        // Reset progress bars initially
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBars = document.querySelectorAll('.progress-bar');
+            progressBars.forEach(bar => {
+                bar.style.width = '0%';
+            });
+            
+            // Check if skills section is already visible on page load
+            const skillsSection = document.querySelector('#skills');
+            if (skillsSection && isInViewport(skillsSection)) {
+                animateProgressBars();
+            }
+        });
+
+        // Handle scroll event
+        window.addEventListener('scroll', function() {
+            const skillsSection = document.querySelector('#skills');
+            if (skillsSection && isInViewport(skillsSection)) {
+                animateProgressBars();
+                // Optional: remove event listener if you only want the animation to happen once
+                // window.removeEventListener('scroll', arguments.callee);
+            }
+        });
+    </script>
 </body>
 </html>

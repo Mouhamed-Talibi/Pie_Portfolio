@@ -1,13 +1,10 @@
 :root {
-    --dark-color: #2C3E50;    
-    --section-color: #F9F9F9; 
-    --red-color: #E74C3C;     
-    --yellow-color: #F9BF3B;  
-    --blue-color: #3498DB;    
-    --teal-color: #1ABC9C;    
-    --light-gray: #ECF0F1;    
-    --text-dark: #2C3E50;     
-    --text-light: #FFFFFF;    
+    --dark-color: #2E475F;    
+    --beige-color: #DFC7B7; 
+    --section-color: #f1ececdd;
+    --warm-peach: #D38C6C;
+    --terra-cotta: #C17A60;
+    --mauve-brown: #7A5B52;      
 }
 
 body {
@@ -36,7 +33,7 @@ body {
     position: absolute;
     width: 60px;
     height: 4px;
-    background-color: var(--red-color);
+    background-color: rgba(0, 0, 0, 0.5);
     left: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -45,7 +42,7 @@ body {
 
 .main-heading p {
     font-size: 1.2rem;
-    color: #5D6D7E;
+    color: var(--terra-cotta);
     margin-top: 5px;
 }
 
@@ -62,8 +59,8 @@ body {
 
 /* start main btn */
 .main-btn {
-    background-color: var(--yellow-color);
-    color: var(--dark-color);
+    background-color: var(--warm-peach);
+    color: var(--section-color);
     padding: .5rem 1.25rem;
     font-weight: 600;
     box-shadow: 0 2px 10px rgba(249, 191, 59, 0.3);
@@ -71,8 +68,8 @@ body {
 }
 
 .main-btn:hover, .main-btn:focus {
-    background-color: var(--red-color);
-    color: var(--text-light);
+    background-color: var(--dark-color);
+    color: var(--warm-peach);
     padding: .5rem 1.25rem;
     box-shadow: 0 2px 15px rgba(231, 76, 60, 0.4);
     transform: translateY(-2px);
@@ -91,32 +88,32 @@ body {
 
 .navbar-brand {
     font-weight: 600;
-    color: var(--text-light);
+    color: var(--warm-peach);
     font-size: 24px;
     transition: .3s color;
 }
 
 .navbar-brand:hover {
-    color: var(--yellow-color);
+    color: var(--terra-cotta);
 }
 
 .login-button {
-    background-color: var(--teal-color);
-    color: var(--text-light);
+    background-color: var(--warm-peach);
+    color: var(--dark-color);
     font-size: 14px;
     padding: 8px 18px;
     border-radius: 50px;
     text-decoration: none;
     transition: 0.3s all;
     font-weight: 600;
-    box-shadow: 0 2px 10px rgba(26, 188, 156, 0.3);
+    box-shadow: 0 0 5px var(--beige-color);
 }
 
 .login-button:hover {
-    background-color: var(--blue-color);
-    color: var(--text-light);
+    background-color: var(--terra-cotta);
+    color: var(--section-color);
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+    box-shadow: 0 4px 15px var(--mauve-brown);
 }
 
 .navbar-toggler {
@@ -129,7 +126,11 @@ body {
 }
 
 .offcanvas-header {
-    background-color: var(--teal-color);
+    background-color: var(--terra-cotta);
+}
+
+.offcanvas-title {
+    color: var(--section-color);
 }
 
 .offcanvas-body {
@@ -142,13 +143,13 @@ body {
 }
 
 .nav-link {
-    color: var(--text-light);
+    color: var(--beige-color);
     position: relative;
     transition: all 0.3s ease;
 }
 
 .nav-link:hover, .nav-link.main{
-    color: var(--teal-color);
+    color: var(--warm-peach);
     font-weight: 600;
 }
 
@@ -161,7 +162,7 @@ body {
         transform: translateX(-50%);
         width: 0;
         height: 2px;
-        background-color: var(--yellow-color);
+        background-color: var(--terra-cotta);
         visibility: hidden;
         transition: 0.3s ease-in-out;
     }
@@ -174,7 +175,7 @@ body {
 
 @media screen and (max-width: 768px) {
     .nav-link:hover {
-        border-bottom: 2px solid var(--teal-color);
+        border-bottom: 2px solid var(--terra-cotta);
         width: 80px;
     }
 }
@@ -182,7 +183,7 @@ body {
 
 /* start hero */
 .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../imgs/woman-2.jpg") no-repeat center;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url("../imgs/woman-2.jpg") no-repeat center;
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -241,18 +242,20 @@ body {
 }
 
 .hero-text h1 {
-    color: var(--text-light);
+    color: var(--beige-color);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .hero-section .hero-text h1 span {
-    color: var(--yellow-color);
+    background-color: var(--terra-cotta);
+    border-radius: 5px;
     font-weight: 600;
+    padding: .1rem .3rem;
 }
 
 .hero-section p {
-    color: var(--yellow-color);
-    border-bottom: 2px solid var(--teal-color);
+    color: var(--terra-cotta);
+    border-bottom: 2px solid var(--beige-color);
     padding: 0 1rem;
     font-size: 40px;
     font-weight: 600;
@@ -289,16 +292,15 @@ body {
 }
 
 .teaching:hover {
-    border: 1px solid var(--teal-color);
+    border: 1px solid var(--beige-color);
     border-radius: 10px;
     padding: 10px;
-    background-color: var(--light-gray);
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(26, 188, 156, 0.2);
+    box-shadow: 0 5px 15px rgba(566, 188, 156, 0.2);
 }
 
 .call-center {
-    border: 1px solid var(--blue-color);
+    border: 1px solid var(--beige-color);
     border-radius: 10px;
     padding: 10px;
     transition: all 0.3s ease;
@@ -306,9 +308,8 @@ body {
 
 .call-center:hover {
     border: 1px solid transparent;
-    background-color: var(--light-gray);
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
+    box-shadow: 0 5px 15px rgba(454, 152, 219, 0.2);
 }
 
 .about-img img {
@@ -324,7 +325,7 @@ body {
 
 /* start services */
 .services {
-    background-color: var(--light-gray);
+    background-color: var(--beige-color);
 }
 
 .service {
@@ -333,18 +334,17 @@ body {
     border-radius: 10px;
     transition: all 0.5s ease;
     overflow: hidden;
-    background-color: var(--text-light);
+    background-color: var(--warm-peach);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     height: 100%;
 }
 
 .service i {
-    background-color: var(--teal-color);
+    background-color: var(--section-color);
     padding: 15px;
-    color: var(--text-light);
+    color: var(--terra-cotta);
     border-radius: 50%;
     transition: all 0.5s ease;
-    box-shadow: 0 4px 10px rgba(26, 188, 156, 0.3);
 }
 
 .service::before {
@@ -354,7 +354,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--teal-color), var(--blue-color));
+    background: linear-gradient(135deg, var(--warm-peach), var(--dark-color));
     transition: all 0.5s ease;
     z-index: -1;
     border-radius: 10px;
@@ -365,30 +365,31 @@ body {
 }
 
 .service:hover {
-    color: var(--text-light);
+    color: var(--section-color);
     transform: translateY(-8px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .service:hover i {
-    background-color: var(--text-light);
-    color: var(--teal-color);
+    background-color: var(--dark-color);
+    color: var(--beige-color);
     transform: scale(1.1) rotate(5deg);
 }
 
 .service h5 {
     margin-top: 15px;
     font-weight: 600;
-    color: var(--dark-color);
+    color: var(--section-color);
     transition: all 0.5s ease;
 }
 
 .service:hover h5 {
-    color: var(--text-light);
+    color: var(--beige-color);
+    margin-bottom: 30px;
 }
 
 .service p {
-    color: #5D6D7E;
+    color: var(--dark-color);
     transition: all 0.5s ease;
 }
 
@@ -403,7 +404,7 @@ body {
     position: absolute;
     width: 60px;
     height: 4px;
-    background-color: var(--yellow-color);
+    background-color: var(--mauve-brown);
     left: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -421,7 +422,7 @@ body {
 }
 
 .skill {
-    background-color: var(--text-light);
+    background-color: var(--beige-color);
     color: var(--dark-color);   
     border-radius: 10px;
     height: 250px;
@@ -433,7 +434,7 @@ body {
 .skill:hover,
 .skill.styled {
     background: linear-gradient(135deg, var(--dark-color), #34495E);
-    color: var(--text-light);
+    color: var(--section-color);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     transform: translateY(-5px);
 }
@@ -446,17 +447,17 @@ body {
 
 .skill:hover i,
 .skill.styled h3 i {
-    color: var(--yellow-color);
+    color: var(--warm-peach);
 }
 
 .skill i {
-    color: var(--red-color);
+    color: var(--terra-cotta);
     transition: all 0.6s ease;
 }
 
 .progress {
     height: 12px;
-    background-color: #ECF0F1;
+    background-color: var(--beige-color);
     border-radius: 6px;
     overflow: hidden;
     margin-top: 8px;
@@ -466,7 +467,7 @@ body {
 .progress-bar {
     height: 100%;
     width: 0;
-    background: linear-gradient(90deg, var(--teal-color), var(--blue-color));
+    background: linear-gradient(90deg, var(--mauve-brown), var(--terra-cotta));
     border-radius: 6px;
     transition: width 1.5s ease-in-out;
 }
@@ -474,7 +475,7 @@ body {
 
 /* start contact */
 .contact {
-    background-color: var(--light-gray);
+    background-color: var(--section-color);
 }
 
 .circular-image {
@@ -482,15 +483,15 @@ body {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    border: 4px solid var(--text-light);
+    border: 4px solid var(--warm-peach);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
     transition: all 0.5s ease;
 }
 
 .circular-image:hover {
     transform: scale(1.05);
-    border-color: var(--teal-color);
-    box-shadow: 0 8px 25px rgba(26, 188, 156, 0.3);
+    border-color: var(--terra-cotta);
+    box-shadow: 0 8px 25px rgba(555, 188, 156, 0.3);
 }
 
 .contact-text {
@@ -503,11 +504,11 @@ body {
 }
 
 .contact-text h2 i {
-    color: var(--teal-color);
+    color: var(--beige-color);
 }
 
 .contact-text p {
-    color: #5D6D7E;
+    color: var(--dark-color);
     font-size: 1.1rem;
 }
 
@@ -577,17 +578,17 @@ body {
 }
 
 .footer .row h3 {
-    color: var(--teal-color);
+    color: var(--beige-color);
     font-weight: 600;
     margin-bottom: 1.5rem;
 }
 
 .footer .copyright > span {
-    color: var(--teal-color);
+    color: var(--terra-cotta);
 }
 
 .footer .copyright div span {
-    color: var(--yellow-color);
+    color: var(--section-color);
 }
 
 .footer .contact ul svg {
@@ -608,14 +609,14 @@ body {
 }
 
 .contact-links a {
-    color: var(--section-color);
+    color: var(--beige-color);
     transition: 0.3s all;
     padding: 3px 0;
     display: inline-block;
 }
 
 .contact-links a:hover {
-    color: var(--yellow-color);
+    color: var(--section-color);
     transform: translateX(5px);
 }
 
